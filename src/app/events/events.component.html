@@ -1,1 +1,4 @@
-<p>events works!</p>
+<div *ngFor="let event of events">
+    <h3>{{ event.title }}</h3>
+    <p>{{ event.text }}</p>
+</div>
