@@ -4,11 +4,11 @@ import { Event } from '../../models/events.models';
 import { EventsService } from '../../services/events.service';
 
 @Component({
-  selector: 'app-events',
-  templateUrl: './events.component.html',
-  styleUrls: ['./events.component.css']
+  selector: 'app-admin-page',
+  templateUrl: './admin-page.component.html',
+  styleUrls: ['./admin-page.component.css']
 })
-export class EventsComponent {
+export class AdminPageComponent {
   events: Event[] = []
 
   constructor(private eventService: EventsService, private router: Router) {

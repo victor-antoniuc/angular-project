@@ -8,6 +8,7 @@ import { EventsComponent } from './components/events/events.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     HomePageComponent,
     EventsComponent,
     AboutPageComponent,
-    NavigationComponent
+    NavigationComponent,
+    AdminPageComponent,
   ],
   imports: [
     BrowserModule,
