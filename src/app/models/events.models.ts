@@ -1,10 +1,10 @@
 export class Event {
-    id: number|null;
+    id: number;
     title: string|null;
     text: string|null;
 
-    constructor(id?: number, title?: string, text?: string) {
-        this.id = id || null;
+    constructor(id: number, title?: string, text?: string) {
+        this.id = id;
         this.title = title || null;
         this.text = text || null;
     }

@@ -13,4 +13,8 @@ export class EventsService {
     getAll(): Observable<Event[]> {
         return this.http.get<Event[]>('http://localhost:8080/events');
     }
+
+    deleteEvent(id: number) {
+        return this.http.delete(`http://localhost:8080/events/delete/${id}`);
+    }
 }

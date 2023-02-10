@@ -20,4 +20,8 @@ export class AdminPageComponent {
         this.events = events
     })
   }
+
+  deleteEvent (id: number) {
+    this.eventService.deleteEvent(id).subscribe()
+  }
 }
