@@ -11,6 +11,7 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 import { AddEventPageComponent } from './pages/add-event-page/add-event-page.component';
+import { PagenotfoundPageComponent } from './pagenotfound-page/pagenotfound-page.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AddEventPageComponent } from './pages/add-event-page/add-event-page.com
     NavigationComponent,
     AdminPageComponent,
     AddEventPageComponent,
+    PagenotfoundPageComponent,
   ],
   imports: [
     BrowserModule,
