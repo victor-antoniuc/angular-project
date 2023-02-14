@@ -23,8 +23,10 @@ export class AdminPageComponent {
   }
 
   deleteEvent (id: number) {
-    this.eventService.deleteEvent(id).subscribe(res => {
-      this.loadEvents();
-    })
+    if(confirm("Are you sure to delete ?")) {
+      this.eventService.deleteEvent(id).subscribe(res => {
+        this.loadEvents();
+      })
+    }
   }
 }
