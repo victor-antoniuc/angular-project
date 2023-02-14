@@ -17,6 +17,6 @@ export class AddEventPageComponent {
   createEvent(event: AddEvent) {
     this.eventService.createEvent(event).subscribe()
 
-    this.router.navigate(['/'])
+    this.router.navigate(['/admin'])
   }
 }

@@ -1,4 +1,5 @@
 import { HttpClient } from "@angular/common/http";
+import { HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { AddEvent } from "../models/add-events.models";
@@ -16,7 +17,8 @@ export class EventsService {
     }
 
     deleteEvent(id: number) {
-        return this.http.delete(`http://localhost:8080/events/delete/${id}`);
+        return this.http.delete(`http://localhost:8080/events/delete/${id}`, {responseType: 'text'})
+    
     }
 
     createEvent(event: AddEvent) {

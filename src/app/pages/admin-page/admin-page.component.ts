@@ -23,8 +23,8 @@ export class AdminPageComponent {
   }
 
   deleteEvent (id: number) {
-    this.eventService.deleteEvent(id).subscribe()
-
-    this.router.navigate(['/'])
+    this.eventService.deleteEvent(id).subscribe(res => {
+      this.loadEvents();
+    })
   }
 }
