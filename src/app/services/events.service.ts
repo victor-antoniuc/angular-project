@@ -22,10 +22,11 @@ export class EventsService {
     }
 
     createEvent(event: AddEvent) {
-        const body = { title: event.title, text: event.text }
         return this.http.post(
           'http://localhost:8080/events/add',
-          body
+          event
         )
     }
+
+
 }
