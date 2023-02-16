@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AddEvent } from 'src/app/models/add-events.models';
 import { EventsService } from 'src/app/services/events.service';
 
@@ -12,11 +12,25 @@ import { EventsService } from 'src/app/services/events.service';
 export class AddEventPageComponent {
   event: AddEvent = new AddEvent()
 
-  constructor(private eventService: EventsService, private router : Router) {}
+  constructor(private eventService: EventsService, private router : Router, private route: ActivatedRoute) {
+    let eventId = route.snapshot.paramMap.get('id');
 
-  createEvent(event: AddEvent) {
-    this.eventService.createEvent(event).subscribe()
+    if (eventId) {
+      eventService.getById(eventId).subscribe((event: any) => {
+        this.event = event;
+      })
+    }
+  }
 
-    this.router.navigate(['/admin'])
+  submitEvent() {
+    if (this.event.id) {
+      this.eventService.updateEvent(this.event).subscribe(res => {
+        this.router.navigate(['/']);
+      });
+    } else {
+      this.eventService.createEvent(this.event).subscribe(res => {
+        this.router.navigate(['/']);
+      });
+    }
   }
 }

@@ -16,6 +16,10 @@ export class EventsService {
         return this.http.get<Event[]>('http://localhost:8080/events');
     }
 
+    getById(id: any) {
+        return this.http.get(`http://localhost:8080/events/${id}`);
+    }
+
     deleteEvent(id: number) {
         return this.http.delete(`http://localhost:8080/events/delete/${id}`, {responseType: 'text'})
     
@@ -28,5 +32,10 @@ export class EventsService {
         )
     }
 
-
+    updateEvent(event: AddEvent) {
+        return this.http.put(
+          `http://localhost:8080/events/update/${event.id}`,
+          event
+        )
+    }
 }

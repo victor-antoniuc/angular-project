@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'about', component: AboutPageComponent},
   { path: 'admin', component: AdminPageComponent},
   { path: 'admin/add', component: AddEventPageComponent },
-
+  { path: 'admin/edit/:id', component: AddEventPageComponent },
   { path: '**', component: PagenotfoundPageComponent }
 ];
 
