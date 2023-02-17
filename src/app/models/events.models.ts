@@ -1,11 +1,17 @@
 export class Event {
     id: number;
-    title: string|null;
-    text: string|null;
+    firstName: string|null;
+    lastName: string|null;
+    phoneNumber: number|null;
+    phoneModel: string|null;
+    description: string|null;
 
-    constructor(id: number, title?: string, text?: string) {
+    constructor(id: number, firstName?: string, lastName?: string, phoneNumber?: number, phoneModel?: string, description?: string) {
         this.id = id;
-        this.title = title || null;
-        this.text = text || null;
+        this.firstName = firstName || null;
+        this.lastName = lastName || null;
+        this.phoneNumber = phoneNumber || null;
+        this.phoneModel = phoneModel || null;
+        this.description = description || null;
     }
 }

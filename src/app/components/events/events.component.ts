@@ -20,4 +20,12 @@ export class EventsComponent {
         this.events = events
     })
   }
+
+  deleteEvent (id: number) {
+    if(confirm("Are you sure to delete ?")) {
+      this.eventService.deleteEvent(id).subscribe(res => {
+        this.loadEvents();
+      }) 
+    }
+  }
 }

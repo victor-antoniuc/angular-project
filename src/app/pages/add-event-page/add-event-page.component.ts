@@ -25,11 +25,11 @@ export class AddEventPageComponent {
   submitEvent() {
     if (this.event.id) {
       this.eventService.updateEvent(this.event).subscribe(res => {
-        this.router.navigate(['/']);
+        this.router.navigate(['/admin']);
       });
     } else {
       this.eventService.createEvent(this.event).subscribe(res => {
-        this.router.navigate(['/']);
+        this.router.navigate(['/admin']);
       });
     }
   }

@@ -10,23 +10,5 @@ import { EventsService } from '../../services/events.service';
   styleUrls: ['./admin-page.component.css']
 })
 export class AdminPageComponent {
-  events: Event[] = []
-
-  constructor(private eventService: EventsService, private router: Router) {
-    this.loadEvents();
-  }
-
-  loadEvents() {
-    this.eventService.getAll().subscribe(events => {
-        this.events = events
-    })
-  }
-
-  deleteEvent (id: number) {
-    if(confirm("Are you sure to delete ?")) {
-      this.eventService.deleteEvent(id).subscribe(res => {
-        this.loadEvents();
-      }) 
-    }
-  }
+  
 }
