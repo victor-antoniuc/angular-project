@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AddEvent } from 'src/app/models/add-events.models';
+import { Event } from 'src/app/models/events.models';
 import { EventsService } from 'src/app/services/events.service';
 
 
@@ -10,7 +10,7 @@ import { EventsService } from 'src/app/services/events.service';
   styleUrls: ['./add-event-page.component.css']
 })
 export class AddEventPageComponent {
-  event: AddEvent = new AddEvent()
+  event: Event = new Event()
 
   constructor(private eventService: EventsService, private router : Router, private route: ActivatedRoute) {
     let eventId = route.snapshot.paramMap.get('id');

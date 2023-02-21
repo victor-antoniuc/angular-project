@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Event } from '../../models/events.models';
 import { EventsService } from '../../services/events.service';
 
 @Component({
@@ -9,11 +8,12 @@ import { EventsService } from '../../services/events.service';
   styleUrls: ['./events.component.css']
 })
 export class EventsComponent {
-  events: Event[] = []
 
   constructor(private eventService: EventsService, private router: Router) {
     this.loadEvents();
   }
+
+  events: any;
 
   loadEvents() {
     this.eventService.getAll().subscribe(events => {

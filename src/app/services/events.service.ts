@@ -2,7 +2,6 @@ import { HttpClient } from "@angular/common/http";
 import { HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { AddEvent } from "../models/add-events.models";
 import { Event } from "../models/events.models";
 
 
@@ -25,14 +24,14 @@ export class EventsService {
     
     }
 
-    createEvent(event: AddEvent) {
+    createEvent(event: Event) {
         return this.http.post(
           'http://localhost:8080/events/add',
           event
         )
     }
 
-    updateEvent(event: AddEvent) {
+    updateEvent(event: Event) {
         return this.http.put(
           `http://localhost:8080/events/update/${event.id}`,
           event
