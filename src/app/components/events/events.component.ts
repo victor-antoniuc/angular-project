@@ -21,6 +21,14 @@ export class EventsComponent {
     })
   }
 
+  deleteAllEvents () {
+    if(confirm("Are you sure to delete all events ?")) {
+      this.eventService.deleteAll().subscribe(events => {
+        this.loadEvents()
+      })
+    }
+  }
+
   deleteEvent (id: number) {
     if(confirm("Are you sure to delete ?")) {
       this.eventService.deleteEvent(id).subscribe(res => {

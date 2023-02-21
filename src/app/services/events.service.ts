@@ -19,6 +19,10 @@ export class EventsService {
         return this.http.get(`http://localhost:8080/events/${id}`);
     }
 
+    deleteAll() {
+        return this.http.delete("http://localhost:8080/events/delete", {responseType: 'text'})
+    }
+
     deleteEvent(id: number) {
         return this.http.delete(`http://localhost:8080/events/delete/${id}`, {responseType: 'text'})
     

@@ -29,7 +29,7 @@ export class AddEventPageComponent {
       });
     } else {
       this.eventService.createEvent(this.event).subscribe(res => {
-        this.router.navigate(['/admin']);
+        this.router.navigate(['/']);
       });
     }
   }
