@@ -25,7 +25,7 @@ export class AddEventPageComponent {
   submitEvent() {
     if (this.event.id) {
       this.eventService.updateEvent(this.event).subscribe(res => {
-        this.router.navigate(['/admin']);
+        this.router.navigate(['/']);
       });
     } else {
       this.eventService.createEvent(this.event).subscribe(res => {

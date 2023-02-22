@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { EventsComponent } from './components/events/events.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
-import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 import { AddEventPageComponent } from './pages/add-event-page/add-event-page.component';
 import { PagenotfoundPageComponent } from './pagenotfound-page/pagenotfound-page.component';
 
@@ -18,7 +17,6 @@ import { PagenotfoundPageComponent } from './pagenotfound-page/pagenotfound-page
     HomePageComponent,
     EventsComponent,
     NavigationComponent,
-    AdminPageComponent,
     AddEventPageComponent,
     PagenotfoundPageComponent,
   ],
