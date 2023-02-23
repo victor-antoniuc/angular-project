@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
-import { Event } from "../models/events.models";
+import { Event } from "../models/event.models";
 
 
 @Injectable({
